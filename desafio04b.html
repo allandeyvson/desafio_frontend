@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<style>
+    #btnControl {
+        display: none;
+    }
+
+    #btnControl:checked+label>img {
+        animation: go-back linear both;
+    }
+
+    @keyframes go-back {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(550%);
+        }
+    }
+</style>
+
+<body>
+    <input type="checkbox" id="btnControl" />
+    <label class="btn" for="btnControl"><img src="https://placekitten.com/200/140" id="btnLeft" /></label>
+</body>
+
+</html>

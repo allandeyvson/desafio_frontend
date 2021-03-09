@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<body>
+
+	<div id="app">
+		{{ mensagem }}
+	</div>
+
+	<button onclick="app.replace()">Replace</button>
+
+
+	<script>
+
+		class ClasseJS {
+			constructor(el, data) {
+				this.el = el;
+				this.data = data;
+			}
+
+			replace(){
+				var str = document.querySelector(this.el).innerHTML;
+				var res = str.replace(str, this.data.message);
+				document.querySelector(this.el).innerHTML = res;
+			}
+		}
+
+		var app = new ClasseJS('#app', {message: 'Olá Mundo!'});
+
+	</script>
+</body>
+</html>
